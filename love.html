@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>LoveDarts</title>
+    <script>
+        function checkMultiChoice(event) {
+            let button = event.target;
+            if (button.innerHTML == 'Yes!') {
+                button.style.backgroundColor = 'Green';
+                button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+            } else {
+                button.style.backgroundColor = 'Red';
+                button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h3>Do you love the Darts?</h3>
+            <button onclick="checkMultiChoice(event)">Yes!</button>
+            <button onclick="checkMultiChoice(event)">No :(</button>
+            <p class="feedback"></p>
+        </div>
+
+</body>
+<nav>
+    <ul>
+        <li><a href="why.html">Why should I play</a></li>
+        <li><a href="ways.html">Ways to play</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+</nav>
+</html>
